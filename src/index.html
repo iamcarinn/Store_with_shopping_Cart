@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping cart</title>
+    <!--    font awesome    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+
+        <!--Навигационная панель-->
+        <nav class="navbar">
+
+            <a href="index.html" class="navbar__brand">Vintage.</a>
+            <button type="button" class="navbar__toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar__collapse">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--Корзина-->
+            <div class="cart">
+                <button type="button" id="cart__btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart__count"></span>
+                </button>
+
+                <div class="cart__container">
+                    <div class="cart-list">
+                        <!--single item-->
+                        <div class="cart-item">
+                            <img src="images/armchair.png" alt="product image">
+                            <div class="cart-item__info">
+                                <h3 class="info__name">Arm Chair</h3>
+                                <span class="info__category">Chair</span>
+                                <span class="info__price">$120.00</span>
+                            </div>
+                            <button type="button" class="cart-item__del-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <!--end of single item-->
+                    </div>
+                    <div class="cart-total">
+                        <h3>Total: $</h3>
+                        <span id="cart-total__value">$120.00</span>
+                    </div>
+                </div>
+            </div>
+            <!--Конец корзины-->
+
+        </nav>
+        <!--Конец навигационной панели-->
+
+
+    </div>
+</header>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

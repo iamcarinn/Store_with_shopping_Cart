@@ -1,0 +1,121 @@
+/*шрифт*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --ghost-white: #f8f9fd;
+    --fire-bush: #e99c2f;
+    --granit-gray: #626a6a;
+    --baltic-sea: #33383c;
+    --trans: all 0.5s ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+/* resets and resuable stylings */
+img {
+    display: block;
+    width: 100%;
+}
+button {
+    /*при наведении рука указывает пальцем*/
+    cursor: pointer;
+    outline: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.text {
+    font-size: 1.1rem;
+    margin: 1.2rem 0;
+    line-height: 1.7;
+    /*прозрачность*/
+    opacity: 0.7;
+}
+/* end of resets and resuable stylings */
+
+/* header */
+header {
+    background: var(--ghost-white);
+}
+header .container {
+    /* 100vh - 100% высоты окна*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
+    width: 100%;
+    padding: 1.5rem 1rem!important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 1.5rem 0;
+    background: var(--ghost-white);
+    z-index: 999;
+}
+.navbar__brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--granit-gray);
+    justify-content: flex-start;
+}
+.navbar__toggle{
+    justify-self: center;
+    border: none;
+    color: #fff;
+    background: var(--fire-bush);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 1.5rem;
+    position: relative;
+}
+.navbar__collapse {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
